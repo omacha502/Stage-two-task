@@ -20,9 +20,5 @@ def index(request):
         contact.subject = subject
         contact.message = message
         contact.save()
-        return HttpResponse('<h1>Thank you for submitting</h1>'
-                            'My Stage two task Submission'
-                            'The contact form responses are stored in the django database,'
-                            'you will have to login to the django admin dashboard to see responses'
-                            '')
+
     return render(request, 'index.html')
