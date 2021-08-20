@@ -34,6 +34,13 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+   <script>
+    function clickHandler() {
+    alert("Thank you for contacting us! Your form has been received successfully")
+    }
+  </script>
+
 </head>
 
 <body>
@@ -311,7 +318,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form method="post">
+            <form method="post" onsubmit="clickHandler()">
               {% csrf_token %}
               <div class="row">
                 <div class="form-group col-md-">
@@ -331,7 +338,7 @@
                 <label for="name">Message</label>
                 <textarea class="form-control" placeholder="Message" name="message" rows="10" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary ml-2" onclick="clickHandler()">Send Message</button>
+              <button type="submit" class="btn btn-primary ml-2">Send Message</button>
             </form>
           </div>
 
@@ -372,12 +379,6 @@
   <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
-
-  <script>
-    function clickHandler() {
-    alert("Thank you for contacting us! Your form has been received successfully")
-    }
-  </script>
 
 
 </body>
